@@ -23,6 +23,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 }));
 
 export default function ProductSelector(props) {
+  const apiKey = import.meta.env.VITE_API_KEY;
   const [searchText, setSearchText] = useState("");
   const [pageNumber, setPageNumber] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -51,14 +52,14 @@ export default function ProductSelector(props) {
       if (loading) return; // Prevent multiple calls if already loading
       setLoading(true);
       const endpoint = searchText
-        ? `http://stageapi.monkcommerce.app/task/products/search?search=${searchText}&page=${page}&limit=10`
-        : `http://stageapi.monkcommerce.app/task/products/search?page=${page}&limit=10`;
+        ? `https://stageapi.monkcommerce.app/task/products/search?search=${searchText}&page=${page}&limit=10`
+        : `https://stageapi.monkcommerce.app/task/products/search?page=${page}&limit=10`;
 
       const response = await fetch(endpoint, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key": `72njgfa948d9aS7gs5`,
+          "x-api-key": apiKey,
         },
       });
       const data = await response.json();
