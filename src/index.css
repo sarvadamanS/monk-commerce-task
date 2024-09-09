@@ -1,0 +1,44 @@
+@font-face {
+  font-family: sfFont;
+  src: url(/sffont/SFProText-Regular.ttf);
+}
+body {
+  font-family: sfFont;
+  padding: 0;
+  margin: 0;
+  background-color: #f6f6f8;
+}
+
+input,
+select,
+select option {
+  border: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+input::selection,
+input:active {
+  border: none;
+}
+.box-shadow-style {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  height: 31px;
+  width: 100%;
+}
+.input-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  height: 31px;
+}
+.input-text input {
+  width: 100%;
+  padding: 5px;
+}
+.input-text button {
+  border: none;
+  background-color: white;
+  height: 31px;
+  width: 31px;
+}
