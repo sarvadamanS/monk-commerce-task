@@ -1,4 +1,3 @@
-// Modal content component
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
@@ -11,28 +10,64 @@ export const InfoModalContent = ({ onClose }) => {
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
-        width: 400,
+        width: {
+          xs: 300, // Extra small screens
+          sm: 400, // Small screens and up
+          md: 500, // Medium screens and up
+        },
+        height: {
+          xs: "80%",
+          lg: "75%",
+        },
         bgcolor: "background.paper",
         boxShadow: 24,
-        p: 4,
+        p: {
+          xs: 2, // Padding for extra small screens
+          sm: 4, // Padding for small screens and up
+        },
         borderRadius: 2,
+        overflow: "auto",
       }}
     >
       <Typography
         variant="h5"
         component="h2"
-        sx={{ fontWeight: "bold", color: "#1976d2" }}
+        sx={{
+          fontWeight: "bold",
+          color: "#1976d2",
+          fontSize: {
+            xs: "1.2rem", // Font size for extra small screens
+            sm: "1.5rem", // Font size for small screens and up
+          },
+        }}
       >
         🛍️ Project Information
       </Typography>
-      <Typography sx={{ mt: 2, fontSize: "1rem", color: "#555" }}>
+      <Typography
+        sx={{
+          mt: 2,
+          fontSize: {
+            xs: "0.9rem", // Font size for extra small screens
+            sm: "1rem", // Font size for small screens and up
+          },
+          color: "#555",
+        }}
+      >
         This project is a shopping application built with React and Material-UI.
         It includes several key features that enhance the user experience and
         product management functionalities.
       </Typography>
 
       <Typography
-        sx={{ mt: 2, fontSize: "1.2rem", fontWeight: "bold", color: "#333" }}
+        sx={{
+          mt: 2,
+          fontSize: {
+            xs: "1rem", // Font size for extra small screens
+            sm: "1.2rem", // Font size for small screens and up
+          },
+          fontWeight: "bold",
+          color: "#333",
+        }}
       >
         Key Features:
       </Typography>
@@ -65,18 +100,44 @@ export const InfoModalContent = ({ onClose }) => {
         </li>
       </ul>
 
-      <Typography sx={{ mt: 2, fontSize: "1rem", color: "#555" }}>
+      <Typography
+        sx={{
+          mt: 2,
+          fontSize: {
+            xs: "0.9rem", // Font size for extra small screens
+            sm: "1rem", // Font size for small screens and up
+          },
+          color: "#555",
+        }}
+      >
         This project was developed with a focus on core functionalities. Some
         design differences exist from the Figma file due to time constraints.
       </Typography>
 
       <Typography
-        sx={{ mt: 3, fontSize: "1rem", fontWeight: "bold", color: "#333" }}
+        sx={{
+          mt: 3,
+          fontSize: {
+            xs: "1rem", // Font size for extra small screens
+            sm: "1.2rem", // Font size for small screens and up
+          },
+          fontWeight: "bold",
+          color: "#333",
+        }}
       >
         🚀 Created by Sarvadaman Singh
       </Typography>
 
-      <Typography sx={{ mt: 1, fontSize: "1rem", color: "#1976d2" }}>
+      <Typography
+        sx={{
+          mt: 1,
+          fontSize: {
+            xs: "0.9rem", // Font size for extra small screens
+            sm: "1rem", // Font size for small screens and up
+          },
+          color: "#1976d2",
+        }}
+      >
         GitHub:{" "}
         <a
           href="https://github.com/sarvadamanS"
